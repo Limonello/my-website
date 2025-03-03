@@ -119,10 +119,15 @@ img{
     /*Les box sont en colonne*/
     .container{
         flex-direction: column;
+        
+    /*scroll*/
+    overflow-y: auto;
     }
     /*-----Les deux box prennent tout l'espace-----*/
     .box-1, .box-2{
         flex: 100%;
+        
+        overflow-y: visible;
     }
     
     /*-----Le texte du projet se superpose au lieu d'être sur la même ligne-----*/
