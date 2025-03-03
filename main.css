@@ -1,0 +1,142 @@
+/*FONTS*/
+@font-face {
+  font-family: DINdong;
+  src: url(DINdong.otf);
+}
+
+/*STYLE TEXTE*/
+h1, h2{
+    font-family: "DINdong", sans-serif;
+}
+
+p1{
+    font-family: "DINdong", sans-serif;
+    font-size: 1.5em;
+}
+
+/*LIENS*/
+a{
+    color: black;
+    text-decoration:none;
+}
+
+a:hover{
+    color:fuchsia;
+}
+
+/*Height fullscreen sans scrollbar*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*DIV*/
+.container{
+    /*-----Flex-----*/
+    display: flex;
+    /*Les box sont alignées*/
+    flex-direction: row;
+    
+    /*-----STYLE CONTAINER-----*/
+     /*Calcul les marges et le padding dans la taille totale du contenant*/
+    box-sizing: border-box;
+    max-width: 1700;
+    /*Height basée sur la taille du body basé sur la taille du html*/
+    height: 100%;
+    /*Centre au milieu de la page*/
+    margin:auto;
+    
+    font-family: Helvetica, Arial, sans-serif;
+    
+    /*repères visuels*/
+    /*border: 2px solid red;*/
+}
+
+/*-----Colonne info-----*/
+.box-1{
+    min-width: 200px;
+    /*Marges intérieures - utiliser autre chose que des pixels si possible*/
+    padding: 1em;
+}
+
+/*-----Colonne portfolio-----*/
+.box-2{
+    /*La box rempli tout l'espace du container disponible*/
+    flex-grow: 1;
+    
+    /*scroll*/
+    overflow-y: auto;
+}
+
+/*TEXTE*/
+/*------Gérer les différents textes-----*/
+.text-container{
+    display: flex;
+    box-sizing: border-box;
+    max-width: 1500px;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 3em;
+    margin-top: 0.5em;
+}
+
+/*-----Les div de texte occupent chacune 1/3 de l'espace-----*/
+.titre-projet, .description-projet, .annee-projet{
+    flex: 33%;
+}
+
+.titre-projet{
+    font-family: "DINdong", sans-serif;
+    font-size: 1.5em;
+}
+
+/*-----Aligner la date à droite-----*/
+.annee-projet{
+    text-align: right;
+}
+
+.titre-portfolio{
+    padding: 1em;
+}
+
+.bottom-text{
+    text-align: center;
+    margin: 3em;
+}
+
+/*IMAGES*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*MEDIA QUERIE*/
+/*-----Adapter le contenu pour les plus petits écrans-----*/
+@media only screen and (max-width: 768px) {
+    
+    /*Les box sont en colonne*/
+    .container{
+        flex-direction: column;
+    }
+    /*-----Les deux box prennent tout l'espace-----*/
+    .box-1, .box-2{
+        flex: 100%;
+    }
+    
+    /*-----Le texte du projet se superpose au lieu d'être sur la même ligne-----*/
+    .text-container{
+        flex-direction: column;
+    }
+    
+    /*-----Aligner la date à gauche-----*/
+    .annee-projet{
+        text-align: left;
+    }
+    
+    /*-----Test pour voir quand le point de bascule s'applique-----*/ 
+    /*body {
+    background-color: lightblue;
+  }*/
+}
