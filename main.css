@@ -4,6 +4,11 @@
   src: url(DINdong.otf);
 }
 
+@font-face{
+    font-family: SpaceGroteskRegular;
+    src: url(SpaceGrotesk-Regular.woff2);
+}
+
 /*STYLE TEXTE*/
 h1, h2{
     font-family: "DINdong", sans-serif;
@@ -12,6 +17,11 @@ h1, h2{
 p1{
     font-family: "DINdong", sans-serif;
     font-size: 1.5em;
+}
+
+p2{
+    font-family: "SpaceGroteskRegular", Helvetica, Arial, sans-serif;
+    font-size: 0.5em;
 }
 
 /*LIENS*/
@@ -47,7 +57,7 @@ html, body {
     /*Centre au milieu de la page*/
     margin:auto;
     
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "SpaceGroteskRegular", Helvetica, Arial, sans-serif;
     
     /*repères visuels*/
     /*border: 2px solid red;*/
@@ -104,6 +114,11 @@ html, body {
 .bottom-text{
     text-align: center;
     margin: 3em;
+}
+
+.credits{
+    text-align: center;
+    margin: auto;
 }
 
 /*IMAGES*/
