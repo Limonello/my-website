@@ -65,7 +65,7 @@ html, body {
 
 /*-----Colonne info-----*/
 .box-1{
-    width: 300px;
+    width: 350px;
     /*Marges intérieures - utiliser autre chose que des pixels si possible*/
     padding: 1em;
 }
@@ -119,6 +119,10 @@ html, body {
 .credits{
     text-align: center;
     margin: auto;
+}
+
+ul{
+    padding-left: 1em;
 }
 
 /*IMAGES*/
